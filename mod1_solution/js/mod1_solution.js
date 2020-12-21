@@ -26,11 +26,13 @@
                 }
 
                 if (count<=3) {
-                    $scope.output = "Enjoy!"
+                    $scope.output = "Enjoy!";
+                    $scope.className = "colorGreen";
                 }
                 
                 if (count>3) {
                     $scope.output = "Too much!";
+                    $scope.className = "colorRed";
                 }
 
                 
