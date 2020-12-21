@@ -5,3 +5,13 @@
 .colorGreen {
     color: green;
 }
+
+.borderRed {
+    border: 2px solid red;
+    background-color: rgba(243, 182, 182, 0.411)
+}
+
+.borderGreen {
+    border: 2px solid green;
+    background-color: rgba(222, 247, 222, 0.521)
+}

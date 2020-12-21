@@ -12,6 +12,7 @@
             if (!$scope.menuList) {
                 $scope.output = "Please enter data!";
                 $scope.className = "colorRed";
+                $scope.txtClassName = "borderRed";
             } else {
                 var count= 0; // string counter initialization
                 
@@ -21,7 +22,7 @@
 
                     var temp = items[i].trim(); // Remove white space
 
-                    count = (temp)?++count:count ; // Don't count empty strings
+                    count = (temp)?++count:count ; // Don't count empty items
 
                     items[i] = temp;
                 }
@@ -29,11 +30,13 @@
                 if (count<=3) {
                     $scope.output = "Enjoy!";
                     $scope.className = "colorGreen";
+                    $scope.txtClassName = "borderGreen";
                 }
                 
                 if (count>3) {
                     $scope.output = "Too much!";
                     $scope.className = "colorGreen";
+                    $scope.txtClassName = "borderGreen";
                 }
 
                 
