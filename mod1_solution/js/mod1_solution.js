@@ -28,6 +28,8 @@
                     $scope.output = "Too much!";
                 }
 
+                console.log(items);
+
             }
             
         }
