@@ -14,7 +14,7 @@
             } else {
                 var count= 0; // string counter initialization
                 
-                const items = $scope.menuList.split(','); // Split user entry
+                var items = $scope.menuList.split(','); // Split user entry
 
                 for (var i=0; i<items.length; i++) {
 
