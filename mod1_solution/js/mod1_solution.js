@@ -12,23 +12,28 @@
             if (!$scope.menuList) {
                 $scope.output = "Please enter data!";
             } else {
-                // Split user entry
-                const items = $scope.menuList.split(',');
+                var count= 0; // string counter initialization
+                
+                const items = $scope.menuList.split(','); // Split user entry
 
-                // Remove white space
                 for (var i=0; i<items.length; i++) {
-                    items[i] = items[i].trim();
+
+                    var temp = items[i].trim(); // Remove white space
+
+                    count = (temp)?++count:count ; // Don't count empty strings
+
+                    items[i] = temp;
                 }
 
-                if (items.length<=3) {
+                if (count<=3) {
                     $scope.output = "Enjoy!"
                 }
                 
-                if (items.length>3) {
+                if (count>3) {
                     $scope.output = "Too much!";
                 }
 
-                console.log(items);
+                
 
             }
             
