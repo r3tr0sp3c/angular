@@ -11,6 +11,7 @@
 
             if (!$scope.menuList) {
                 $scope.output = "Please enter data!";
+                $scope.className = "colorRed";
             } else {
                 var count= 0; // string counter initialization
                 
@@ -32,7 +33,7 @@
                 
                 if (count>3) {
                     $scope.output = "Too much!";
-                    $scope.className = "colorRed";
+                    $scope.className = "colorGreen";
                 }
 
                 
