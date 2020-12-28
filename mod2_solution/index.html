@@ -36,16 +36,16 @@
      <ul>
        <li ng-repeat="item in buyList.list">Buy {{item.quantity}} {{item.name}} <button class="btn btn-default" ng-click="buyList.showIndex($index)"><span class="glyphicon glyphicon-ok"></span> Bought</button></li>
      </ul>
-     <div class="emptyMessage">Everything is bought!</div>
+     <div class="emptyMessage" ng-hide="buyList.list.length">Everything is bought!</div>
     </div>
 
     <!-- Already Bought List -->
     <div class="col-md-6" ng-controller="boughtListController as boughtList">
      <h2>Already Bought:</h2>
      <ul>
-       <li>Bought 10 cookies</li>
+       <li ng-repeat="item in boughtList.list">Bought {{item.quantity}} {{item.name}}</li>
      </ul>
-     <div class="emptyMessage">Nothing bought yet.</div>
+     <div class="emptyMessage" ng-show="!boughtList.list.length">Nothing bought yet.</div>
     </div>
   </div>
 </div>
