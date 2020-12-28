@@ -11,7 +11,7 @@ function toBuyListController(listService) {
     var buyList = this;
     buyList.list = listService.buyList;
     
-    buyList.showIndex = function(index) {
+    buyList.clickAway = function(index) {
         listService.clickAway(index);
     }
     
@@ -22,6 +22,10 @@ boughtListController.$inject = ['listService'];
 function boughtListController(listService) {
     var boughtList = this;
     boughtList.list = listService.boughtList;
+
+    boughtList.sendBack = function (index) {
+        listService.clickBack(index);
+    }
 }
 
 function listService() {
@@ -39,6 +43,11 @@ function listService() {
     service.clickAway = function(index) {
         var item = service.buyList.splice(index,1);
         service.boughtList.push(item[0]);
+    }
+
+    service.clickBack = function(index) {
+        var item = service.boughtList.splice(index,1);
+        service.buyList.push(item[0]);
     }
 
 }
