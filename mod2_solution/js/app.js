@@ -1,5 +1,6 @@
 // Inside IIFE
 (function() {
+'use strinct';
 
 angular.module('myApp', [])
 .controller('toBuyListController', toBuyListController)
