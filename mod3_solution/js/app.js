@@ -70,7 +70,7 @@
 
             var fetch = $http({
                 method: "GET",
-                url: "http://davids-restaurant.herokuapp.com/menu_items.json"
+                url: "https://davids-restaurant.herokuapp.com/menu_items.json"
             })     
             .then(function(result) {
                 var array = result.data.menu_items || [];
