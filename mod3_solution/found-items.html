@@ -1,0 +1,4 @@
+<ul>
+    <li ng-repeat="item in fiCtrl.foundList">({{item.short_name}}) {{item.name}} <br><br>{{item.description}} <br><br> <input type="button" value="Don't want this one!" ng-click="fiCtrl.onRemove({index: $index})"></li>
+</ul>
+<p class="error">Nothing is found!</p>

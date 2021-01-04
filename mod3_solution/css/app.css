@@ -1,0 +1,30 @@
+.error {
+    display: none;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items:flex-start;
+}
+ul li {
+    padding: 20px;
+    margin: 10px;
+    width: 200px;
+    background-color:rgba(0, 255, 255, 0.233);
+    border-radius: 20px;
+    border: rgba(0, 255, 255, 0.527) 1px solid;
+    -webkit-box-shadow: 10px 10px 5px -6px rgba(0,0,0,0.33);
+    -moz-box-shadow: 10px 10px 5px -6px rgba(0,0,0,0.33);
+    box-shadow: 10px 10px 5px -6px rgba(0,0,0,0.33);
+}
+
+input[type=button] {
+    border: rgba(0, 255, 255, 0.527) 2px solid;
+    padding: 8px;
+    background-color: rgba(0, 255, 255, 0.233);
+    border-radius: 10px;
+    color: rgba(1, 65, 65, 0.945);
+}
